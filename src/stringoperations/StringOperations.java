@@ -248,4 +248,15 @@ public class StringOperations {
                 str.trim().charAt(str.trim().length() - 1)
         );
     }
+
+    public static void implementation() {
+        StringOperations operations = new StringOperations();
+        String text = "  Java Lambda Expressions  ";
+        String sentence = "Java Lambda Expressions are Powerful";
+
+        System.out.println("Uppercase: " + operations.upperCase().transform(text));
+        System.out.println("Lowercase: " + operations.lowerCase().transform(text));
+        System.out.println("Reverse: " + operations.reverse().transform(text));
+        System.out.println("Length: " + operations.length().count(text));
+    }
 }
