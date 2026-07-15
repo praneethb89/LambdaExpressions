@@ -178,6 +178,11 @@ public class StringOperationsDemo {
 
             if (running) {
                 System.out.println("\n" + "=".repeat(50));
+                System.out.print("\nWhich case would you like to print? (1-10 or 0 to continue): ");
+                int caseChoice = scanner.nextInt();
+                if (caseChoice != 0) {
+                    StringOperations.implementation(caseChoice);
+                }
             }
         }
 
