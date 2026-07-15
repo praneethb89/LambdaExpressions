@@ -249,14 +249,44 @@ public class StringOperations {
         );
     }
 
-    public static void implementation() {
+    public static void implementation(int choice) {
         StringOperations operations = new StringOperations();
         String text = "  Java Lambda Expressions  ";
         String sentence = "Java Lambda Expressions are Powerful";
 
-        System.out.println("Uppercase: " + operations.upperCase().transform(text));
-        System.out.println("Lowercase: " + operations.lowerCase().transform(text));
-        System.out.println("Reverse: " + operations.reverse().transform(text));
-        System.out.println("Length: " + operations.length().count(text));
+        switch(choice) {
+            case 1:
+                System.out.println("Uppercase: " + operations.upperCase().transform(text));
+                break;
+            case 2:
+                System.out.println("Lowercase: " + operations.lowerCase().transform(text));
+                break;
+            case 3:
+                System.out.println("Reverse: " + operations.reverse().transform(text));
+                break;
+            case 4:
+                System.out.println("Length: " + operations.length().count(text));
+                break;
+            case 5:
+                System.out.println("Trimmed: " + operations.trim().transform(text));
+                break;
+            case 6:
+                System.out.println("Replace Spaces: " + operations.replaceSpaces().transform(text));
+                break;
+            case 7:
+                System.out.println("Remove Vowels: " + operations.removeVowels().transform(text));
+                break;
+            case 8:
+                System.out.println("Vowels: " + operations.vowelCount().count(text));
+                break;
+            case 9:
+                System.out.println("Consonants: " + operations.consonantCount().count(text));
+                break;
+            case 10:
+                System.out.println("Longest Word: " + operations.longestWord().find(sentence));
+                break;
+            default:
+                System.out.println("Invalid choice!");
+        }
     }
 }
